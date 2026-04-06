@@ -12,6 +12,15 @@ if exists('b:current_syntax')
   unlet b:current_syntax
 endif
 
+" Load YAML syntax (needed when ft=ansible rather than ft=yaml.ansible)
+if !exists('b:yaml_syntax_loaded')
+  runtime! syntax/yaml.vim
+  let b:yaml_syntax_loaded = 1
+  if exists('b:current_syntax')
+    unlet b:current_syntax
+  endif
+endif
+
 syntax include @Jinja syntax/jinja2.vim
 
 if exists('s:current_syntax')

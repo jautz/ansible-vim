@@ -133,5 +133,4 @@ enddef
 
 
 # set the custom omnifunction
-setlocal completeopt=menu,menuone,noselect
 setlocal omnifunc=CompleteModules

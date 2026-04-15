@@ -238,7 +238,13 @@ You'll then be able to go to a role's definition with `<leader>gr`.
 
 After the pattern `ansible.builtin.` completion for the ansible builtin modules works with CTRL-X CTRL-O.
 
-See `:h omnifunc` and `:h ins-completion`.
+The completion popup behavior is controlled by your `completeopt` setting. For example, to show the menu without auto-selecting an entry:
+
+```vim
+set completeopt=menu,menuone,noselect
+```
+
+See `:h completeopt`, `:h omnifunc` and `:h ins-completion`.
 
 <img width="417" height="121" alt="vim-ansible-comletion_2" src="https://github.com/user-attachments/assets/db72891e-1d97-47a3-9337-35db9967e9d1" />
 
